@@ -14,8 +14,8 @@ To setup and start application, open thev terminal and type the following comman
 ## Api
 
 -   GET localhost:5000 - start page
--   GET localhost:5000/images - gets image metadata from public/Images
--   POST localhost:5000/upload - posts images to public/Images
+-   GET localhost:5000/images - gets images metadata from public/Images
+-   POST localhost:5000/upload - upload image to public/Images
 
 ## Future improvements
 
