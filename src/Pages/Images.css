@@ -1,0 +1,17 @@
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+img {
+    max-width: 80px;
+}
+
+picture {
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.6rem;
+}

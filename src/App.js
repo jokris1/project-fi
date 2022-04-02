@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+// import f from './Functions/functions';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Header from './Components/Header/Header';
+import Home from './Pages/Home';
+import Upload from './Pages/Upload';
+import Images from './Pages/Images';
 
-function App() {
+const nav = [
+    {'name': 'Home', 'path': '/'},
+    {'name': 'Upload', 'path': '/upload'},
+    {'name': 'Images', 'path': '/images'},
+]
+
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <Header nav={nav} />
+        <BrowserRouter>
+            <Routes>
+                <Route exact path="/" element={<Home/>} />
+                <Route exact path="/upload" element={<Upload/>} />
+                <Route exact path="/images" element={<Images/>} />
+            </Routes>
+        </BrowserRouter>
     </div>
-  );
-}
-
-export default App;
+  )
+};
